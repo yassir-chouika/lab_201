@@ -9,7 +9,7 @@ A simple boilerplate to start building React apps with Tailwind and Vite.
 Start by cloning the GitHub repository to your local machine:
 
 ```bash
-git clone https://github.com/yassir-chouika/react-zero-config
+git clone https://github.com/yassir-chouika/lab_201
 ```
 
 ### 2. Install Dependencies
