@@ -9,6 +9,7 @@ import PrivateRoute from "./routes/PrivateRoute";
 import PublicRoute from "./routes/PublicRoute";
 import LoginForm from "./components/admin/LoginForm";
 import AdminDashboard from "./components/admin/AdminDashboard";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
@@ -35,15 +36,7 @@ function App() {
             path="/"
             element={
               <PublicRoute>
-                <div className="min-h-screen flex flex-col items-center justify-center">
-                  <h1 className="text-2xl font-bold mb-6">Public Website</h1>
-                  <a
-                    href="/login"
-                    className="text-blue-500 hover:underline text-lg"
-                  >
-                    Go to Admin Login
-                  </a>
-                </div>
+                <HomePage />
               </PublicRoute>
             }
           />

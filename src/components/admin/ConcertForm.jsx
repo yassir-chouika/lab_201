@@ -1,3 +1,4 @@
+// src/components/ConcertForm.jsx
 import { useState } from "react";
 import { db } from "../../services/firebase";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
@@ -26,7 +27,6 @@ const ConcertForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (
       !formData.titre ||
       !formData.date ||
@@ -45,7 +45,7 @@ const ConcertForm = () => {
       });
       setSuccessMsg("Concert added successfully!");
       setFormData(initialFormState);
-      setTimeout(() => setSuccessMsg(""), 2000);
+      setTimeout(() => setSuccessMsg(""), 3000);
     } catch (err) {
       console.error("Error adding concert:", err);
       alert("Something went wrong.");
@@ -55,78 +55,150 @@ const ConcertForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <h2 className="text-xl font-bold">Add New Concert</h2>
+    <div>
+      <div className="mb-6">
+        <h2 className="text-lg font-semibold text-gray-900 mb-1">
+          Add Concert
+        </h2>
+        <p className="text-sm text-gray-500">Create a new concert entry</p>
+      </div>
 
       {successMsg && (
-        <div className="bg-green-100 text-green-700 px-3 py-2 rounded text-sm">
-          {successMsg}
+        <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+          <div className="flex items-center">
+            <svg
+              className="w-4 h-4 text-green-600 mr-2"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <span className="text-sm font-medium text-green-800">
+              {successMsg}
+            </span>
+          </div>
         </div>
       )}
 
-      <input
-        type="text"
-        name="titre"
-        placeholder="Title"
-        value={formData.titre}
-        onChange={handleChange}
-        className="w-full border px-3 py-2 rounded"
-      />
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <label
+            htmlFor="titre"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
+            Title
+          </label>
+          <input
+            type="text"
+            id="titre"
+            name="titre"
+            placeholder="Concert title"
+            value={formData.titre}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+          />
+        </div>
 
-      <input
-        type="date"
-        name="date"
-        value={formData.date}
-        onChange={handleChange}
-        className="w-full border px-3 py-2 rounded"
-      />
+        <div>
+          <label
+            htmlFor="date"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
+            Date
+          </label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            value={formData.date}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+          />
+        </div>
 
-      <input
-        type="text"
-        name="venue"
-        placeholder="Venue"
-        value={formData.venue}
-        onChange={handleChange}
-        className="w-full border px-3 py-2 rounded"
-      />
+        <div>
+          <label
+            htmlFor="venue"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
+            Venue
+          </label>
+          <input
+            type="text"
+            id="venue"
+            name="venue"
+            placeholder="Venue name"
+            value={formData.venue}
+            onChange={handleChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+          />
+        </div>
 
-      <input
-        type="text"
-        name="ville"
-        placeholder="City"
-        value={formData.ville}
-        onChange={handleChange}
-        className="w-full border px-3 py-2 rounded"
-      />
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label
+              htmlFor="ville"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
+              City
+            </label>
+            <input
+              type="text"
+              id="ville"
+              name="ville"
+              placeholder="City"
+              value={formData.ville}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+            />
+          </div>
 
-      <input
-        type="text"
-        name="pays"
-        placeholder="Country"
-        value={formData.pays}
-        onChange={handleChange}
-        className="w-full border px-3 py-2 rounded"
-      />
+          <div>
+            <label
+              htmlFor="pays"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
+              Country
+            </label>
+            <input
+              type="text"
+              id="pays"
+              name="pays"
+              placeholder="Country"
+              value={formData.pays}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
+            />
+          </div>
+        </div>
 
-      <label className="inline-flex items-center space-x-2">
-        <input
-          type="checkbox"
-          name="isSoldOut"
-          checked={formData.isSoldOut}
-          onChange={handleChange}
-          className="accent-red-500"
-        />
-        <span>Sold Out</span>
-      </label>
+        <div className="flex items-center">
+          <input
+            type="checkbox"
+            id="isSoldOut"
+            name="isSoldOut"
+            checked={formData.isSoldOut}
+            onChange={handleChange}
+            className="h-4 w-4 text-gray-600 border-gray-300 rounded focus:ring-gray-500"
+          />
+          <label htmlFor="isSoldOut" className="ml-2 text-sm text-gray-700">
+            Sold out
+          </label>
+        </div>
 
-      <button
-        type="submit"
-        disabled={loading}
-        className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-      >
-        {loading ? "Adding..." : "Add Concert"}
-      </button>
-    </form>
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {loading ? "Adding..." : "Add Concert"}
+        </button>
+      </form>
+    </div>
   );
 };
 
