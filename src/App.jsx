@@ -10,6 +10,7 @@ import PublicRoute from "./routes/PublicRoute";
 import LoginForm from "./components/admin/LoginForm";
 import AdminDashboard from "./components/admin/AdminDashboard";
 import HomePage from "./pages/HomePage";
+import ConcertsPage from "./pages/ConcertsPage";
 
 function App() {
   return (
@@ -37,6 +38,14 @@ function App() {
             element={
               <PublicRoute>
                 <HomePage />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="/ConcertsPage"
+            element={
+              <PublicRoute>
+                <ConcertsPage />
               </PublicRoute>
             }
           />
