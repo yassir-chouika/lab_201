@@ -11,6 +11,7 @@ import LoginForm from "./components/admin/LoginForm";
 import AdminDashboard from "./components/admin/AdminDashboard";
 import HomePage from "./pages/HomePage";
 import ConcertsPage from "./pages/ConcertsPage";
+import ConcertSection from "./components/ConcertSection"
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             element={
               <PublicRoute>
                 <HomePage />
+                <ConcertSection />
               </PublicRoute>
             }
           />
