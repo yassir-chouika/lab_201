@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useAuth } from "../../context/AuthContext";
-import ConcertForm from "./ConcertForm";
-import ConcertList from "./ConcertList";
+import { useAuth } from "../context/AuthContext";
+import ConcertForm from "../components/ConcertForm";
+import ConcertList from "../components/ConcertList";
 
 const AdminDashboard = () => {
   const { logout, currentUser } = useAuth();
@@ -19,7 +19,7 @@ const AdminDashboard = () => {
               </div>
               <div>
                 <h1 className="text-xl font-semibold text-gray-900">
-                  Welcome Back
+                  Interface admin Lindstrøm
                 </h1>
                 <p className="text-sm text-gray-500">{currentUser?.email}</p>
               </div>
@@ -28,7 +28,7 @@ const AdminDashboard = () => {
               onClick={logout}
               className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
             >
-              Sign out
+              Se déconnecter
             </button>
           </div>
         </div>
@@ -47,7 +47,7 @@ const AdminDashboard = () => {
                   : "bg-white text-gray-700 hover:bg-gray-100"
               }`}
             >
-              Concert List
+              Liste des concerts
             </button>
             <button
               onClick={() => setActiveTab("list")}
@@ -57,7 +57,7 @@ const AdminDashboard = () => {
                   : "bg-white text-gray-700 hover:bg-gray-100"
               }`}
             >
-              Add Concert
+              Ajouter un concert
             </button>
           </div>
         </div>

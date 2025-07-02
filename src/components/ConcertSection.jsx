@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../services/firebase";
+import { useNavigate } from "react-router-dom";
 
 export default function Tour2025() {
   const [concerts, setConcerts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchConcerts = async () => {
@@ -116,7 +118,10 @@ export default function Tour2025() {
             )}
 
             <div className="mt-12">
-              <button className="px-6 py-3 border border-gray-600 rounded-full text-gray-700 hover:bg-gray-300 transition-colors duration-200">
+              <button
+                onClick={() => navigate("/ConcertsPage")}
+                className="px-6 py-3 border border-gray-600 rounded-full text-gray-700 hover:bg-gray-300 transition-colors duration-200"
+              >
                 Voir toutes les dates
               </button>
             </div>

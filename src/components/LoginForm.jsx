@@ -1,5 +1,5 @@
 // src/components/LoginForm.jsx
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
 
 const LoginForm = () => {
@@ -35,7 +35,7 @@ const LoginForm = () => {
           </div>
           <h1 className="text-2xl font-semibold text-gray-900 mb-2">Admin</h1>
           <p className="text-sm text-gray-500">
-            Login in to manage your shit dumbass
+            Connectez-vous pour gérer vos concerts
           </p>
         </div>
 
@@ -68,7 +68,7 @@ const LoginForm = () => {
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Email address
+                Addresse mail
               </label>
               <input
                 type="email"
@@ -86,7 +86,7 @@ const LoginForm = () => {
                 htmlFor="password"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Password
+                Mot de passe
               </label>
               <input
                 type="password"
@@ -104,14 +104,14 @@ const LoginForm = () => {
               disabled={loading}
               className="w-full bg-blue-500 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? "Loging in..." : "Login in"}
+              {loading ? "Connexion en cours..." : "Se Connecter"}
             </button>
           </form>
         </div>
 
         {/* Footer */}
         <div className="text-center mt-6">
-          <p className="text-xs text-gray-500">Authorized personnel only</p>
+          <p className="text-xs text-gray-500">Personnel autorisé uniquement</p>
         </div>
       </div>
     </div>

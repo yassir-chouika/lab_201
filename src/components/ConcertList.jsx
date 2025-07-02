@@ -1,6 +1,6 @@
 // src/components/ConcertList.jsx
 import { useEffect, useState } from "react";
-import { db } from "../../services/firebase";
+import { db } from "../services/firebase";
 import {
   collection,
   query,

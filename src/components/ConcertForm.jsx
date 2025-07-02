@@ -1,6 +1,6 @@
 // src/components/ConcertForm.jsx
 import { useState } from "react";
-import { db } from "../../services/firebase";
+import { db } from "../services/firebase";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 
 const initialFormState = {
@@ -58,9 +58,9 @@ const ConcertForm = () => {
     <div>
       <div className="mb-6">
         <h2 className="text-lg font-semibold text-gray-900 mb-1">
-          Add Concert
+          Ajouter un concert
         </h2>
-        <p className="text-sm text-gray-500">Create a new concert entry</p>
+        <p className="text-sm text-gray-500">Créer un nouveau concert</p>
       </div>
 
       {successMsg && (
@@ -90,13 +90,13 @@ const ConcertForm = () => {
             htmlFor="titre"
             className="block text-sm font-medium text-gray-700 mb-2"
           >
-            Title
+            Titre
           </label>
           <input
             type="text"
             id="titre"
             name="titre"
-            placeholder="Concert title"
+            placeholder="Titre du concert"
             value={formData.titre}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
@@ -125,13 +125,13 @@ const ConcertForm = () => {
             htmlFor="venue"
             className="block text-sm font-medium text-gray-700 mb-2"
           >
-            Venue
+            Lieu
           </label>
           <input
             type="text"
             id="venue"
             name="venue"
-            placeholder="Venue name"
+            placeholder="Nom du lieu"
             value={formData.venue}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
@@ -144,13 +144,13 @@ const ConcertForm = () => {
               htmlFor="ville"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              City
+              Ville
             </label>
             <input
               type="text"
               id="ville"
               name="ville"
-              placeholder="City"
+              placeholder="Ville"
               value={formData.ville}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
@@ -162,13 +162,13 @@ const ConcertForm = () => {
               htmlFor="pays"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Country
+              Pays
             </label>
             <input
               type="text"
               id="pays"
               name="pays"
-              placeholder="Country"
+              placeholder="Pays"
               value={formData.pays}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
@@ -195,7 +195,7 @@ const ConcertForm = () => {
           disabled={loading}
           className="w-full bg-blue-600 text-white py-2.5 px-4 rounded-lg text-sm font-medium hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {loading ? "Adding..." : "Add Concert"}
+          {loading ? "Adding..." : "Ajouter un concert"}
         </button>
       </form>
     </div>

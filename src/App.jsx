@@ -7,11 +7,11 @@ import {
 import { AuthProvider } from "./context/AuthContext";
 import PrivateRoute from "./routes/PrivateRoute";
 import PublicRoute from "./routes/PublicRoute";
-import LoginForm from "./components/admin/LoginForm";
-import AdminDashboard from "./components/admin/AdminDashboard";
-import HomePage from "./pages/HomePage";
+import LoginForm from "./components/LoginForm";
+import AdminDashboard from "./pages/AdminDashboard";
+// import HomePage from "./pages/HomePage";
 import ConcertsPage from "./pages/ConcertsPage";
-import ConcertSection from "./components/ConcertSection"
+import ConcertSection from "./components/ConcertSection";
 
 function App() {
   return (
@@ -38,7 +38,7 @@ function App() {
             path="/"
             element={
               <PublicRoute>
-                <HomePage />
+                {/* <HomePage /> */}
                 <ConcertSection />
               </PublicRoute>
             }
