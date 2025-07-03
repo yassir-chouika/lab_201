@@ -1,1 +1,456 @@
 @import "tailwindcss";
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+html   {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: white;
+   animation: fadeUp 1s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.hero-top-text {
+  font-size: 1.6rem;
+
+  color: #00ffe0;
+  font-family: "Orbitron";
+}
+
+.hero-artist-name {
+  font-size: 65px;
+  color: #00ffe0;
+  font-weight: bold;
+  font-family: "Orbitron";
+}
+
+.hero-sub-text {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #00ffe0;
+  font-family: "Orbitron";
+}
+.hero-buttons{
+  margin-top: 80px;
+}
+.hero-buttons a {
+  
+  border-radius: 50px;
+  padding: 12px 24px;
+  border: 2px solid;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-buttons .btn-purple {
+  color: #9d4edd;
+  border-color: #9d4edd;
+}
+
+.hero-buttons .btn-purple:hover {
+  background-color: #9d4edd;
+  color: white;
+}
+
+.hero-buttons .btn-magenta {
+  color: #ff3cac;
+  border-color: #ff3cac;
+}
+
+.hero-buttons .btn-magenta:hover {
+  background-color: #ff3cac;
+  color: white;
+}
+
+.a-propos {
+  padding: 5rem 2rem;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+}
+
+.a-propos-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  font-family: "Orbitron", sans-serif;
+}
+
+.a-propos-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  text-align: left;
+}
+
+.a-propos-content img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 255, 224, 0.2);
+}
+
+.a-propos-plus {
+  max-width: 600px;
+}
+
+.a-propos-long {
+  font-size: 1.1rem;
+  font-weight: lighter;
+  line-height: 1.6;
+  margin-bottom: 75px;
+  font-family: "Roboto mono";
+}
+
+.a-propos-plus a {
+
+margin-left: 205px;
+  padding: 10px 20px;
+  border: 2px solid #00ffe0;
+  color: #00ffe0;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+
+}
+
+.a-propos-plus a:hover {
+  background-color: #00ffe0;
+  color: black;
+}
+.artist-quote {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  color: #00FFE0;
+  text-align: center;
+}
+
+.artist-timeline {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.artist-timeline .event {
+  background-color: #111;
+  padding: 1rem;
+  border-radius: 8px;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Orbitron";
+  width: 150px;
+  font-weight: bold;
+  box-shadow: 15px 15px 10px rgba(0, 255, 225, 0.1);
+}
+.artist-timeline :hover{
+  background-color: #73cac0;
+}
+
+/* pochette */
+.new-album {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.new-album-title {
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.new-album-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
+.album-description {
+  max-width: 500px;
+}
+
+.album-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-family: "Orbitron";
+}
+
+.tracklist {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.tracklist li {
+  margin-bottom: 0.5rem;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.buy-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #00FFE0;
+  color: #00FFE0;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.buy-link:hover {
+  background-color: #00FFE0;
+  color: #000;
+}
+
+.album-cover img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 255, 224, 0.2);
+}
+
+
+/*tourdate*/
+.tour-section {
+  background-color: #0a0a0a;
+  color: #00FFE0;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.tour-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-family: "Orbitron", sans-serif;
+}
+
+.tour-content {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.tour-image img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 255, 224, 0.2);
+}
+
+.tour-dates {
+  max-width: 500px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.tour-dates ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.tour-dates li {
+  margin-bottom: 1rem;
+}
+
+.tour-placeholder {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+
+/*blog section */ 
+.blog-section {
+  background-color: #000;
+  color: #00FFE0;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 3rem;
+}
+
+.blog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.blog-card {
+  background-color: #00FFE0;
+  border-radius: 12px;
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 224, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.blog-card h3 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #000;
+}
+
+.blog-card a {
+  margin-bottom: 1rem;
+  color: #000000;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.blog-card a:hover {
+  text-decoration: underline;
+}
+
+/*footer*/
+.footer {
+background-color: #ff3cac;
+  color: #00FFE0;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-left h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #000;
+}
+
+.footer-icons a {
+  color: #00FFE0;
+  font-size: 1.8rem;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.2);
+}
+
+.footer-promo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-promo img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 255, 224, 0.2);
+}
+
+.promo-text p {
+  margin: 0;
+  font-size: 1rem;
+  color: #000;
+}
+
+.promo-text a {
+  color: #00FFE0;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.promo-text a:hover {
+  text-decoration: underline;
+}
