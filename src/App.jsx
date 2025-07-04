@@ -9,9 +9,8 @@ import PrivateRoute from "./routes/PrivateRoute";
 import PublicRoute from "./routes/PublicRoute";
 import LoginForm from "./components/LoginForm";
 import AdminDashboard from "./pages/AdminDashboard";
-// import HomePage from "./pages/HomePage";
+import HomePage from "./pages/HomePage";
 import ConcertsPage from "./pages/ConcertsPage";
-import ConcertSection from "./components/ConcertSection";
 
 function App() {
   return (
@@ -38,8 +37,7 @@ function App() {
             path="/"
             element={
               <PublicRoute>
-                {/* <HomePage /> */}
-                <ConcertSection />
+                <HomePage />
               </PublicRoute>
             }
           />

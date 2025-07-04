@@ -38,13 +38,13 @@ export default function Tour2025() {
     <div className="min-h-screen bg-gray-200 flex flex-col">
       {/* Header */}
       <div className="w-full py-8 px-4">
-        <h1 className="text-center text-4xl md:text-6xl font-bold text-gray-800 tracking-wider">
+        <h1 className="font-sans text-center text-4xl md:text-6xl font-bold text-gray-800 tracking-wider">
           TOUR 2025
         </h1>
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col lg:flex-row">
+      <div className="font-mono flex-1 flex flex-col lg:flex-row">
         {/* Left Side - X Pattern */}
         <div className="flex-1 flex items-center justify-center p-8 lg:p-16">
           <div className="relative w-full max-w-md aspect-square">
