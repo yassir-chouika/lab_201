@@ -9,7 +9,7 @@ const HeroSection = () => {
       <section className="hero fade-up">
         <video autoPlay loop muted playsInline>
           <source
-            src="/videos/5983038-uhd_3840_2160_24fps.mp4"
+            src="/hero_vid.mp4"
             type="video/mp4"
           />
         </video>

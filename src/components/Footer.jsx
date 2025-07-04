@@ -45,7 +45,7 @@ const Footer = () => {
 
       <div className="footer-promo">
         <img
-          src="/images/pexels-brettjordan-2746823.jpg"
+          src="/pexels-brettjordan-2746823.jpg"
           alt="Pochette Sirius Syntoms"
         />
         <div className="promo-text">
