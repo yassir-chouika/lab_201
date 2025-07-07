@@ -11,7 +11,7 @@ const AProposSection = () => {
       </blockquote>
 
       <div className="a-propos-content">
-        <img src="/images/lindstrom.jpg" alt="Portrait de Lindstrøm" />
+        <img src="/lindstrom.jpg" alt="Portrait de Lindstrøm" />
         <div className="a-propos-plus">
           <p className="a-propos-long">
             Lindstrøm, pionnier norvégien du space disco, crée des paysages
@@ -29,7 +29,7 @@ const AProposSection = () => {
           </a>
         </div>
       </div>
-
+      <h4>Les Albums</h4>
       <div className="artist-timeline">
         <div className="event">
           <span>2003</span>

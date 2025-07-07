@@ -38,7 +38,6 @@ function App() {
             element={
               <PublicRoute>
                 <HomePage />
-                <ConcertSection />
               </PublicRoute>
             }
           />

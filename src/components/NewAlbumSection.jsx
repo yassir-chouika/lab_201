@@ -37,7 +37,7 @@ const NewAlbumSection = () => {
 
         <div className="album-cover">
           <img
-            src="/images/pexels-cottonbro-3693108.jpg"
+            src="/pexels-cottonbro-3693108.jpg"
             alt="Pochette de l'album Sirius Syntoms"
           />
         </div>
