@@ -48,31 +48,7 @@ export default function Tour2025() {
         {/* Left Side - X Pattern */}
         <div className="flex-1 flex items-center justify-center p-8 lg:p-16">
           <div className="relative w-full max-w-md aspect-square">
-            <div className="absolute inset-0 border-2 border-gray-600">
-              {/* X Lines */}
-              <svg
-                className="w-full h-full"
-                viewBox="0 0 100 100"
-                preserveAspectRatio="none"
-              >
-                <line
-                  x1="0"
-                  y1="0"
-                  x2="100"
-                  y2="100"
-                  stroke="#4B5563"
-                  strokeWidth="0.5"
-                />
-                <line
-                  x1="100"
-                  y1="0"
-                  x2="0"
-                  y2="100"
-                  stroke="#4B5563"
-                  strokeWidth="0.5"
-                />
-              </svg>
-            </div>
+            <img src="/AfficheTour.png" alt="" />
           </div>
         </div>
 

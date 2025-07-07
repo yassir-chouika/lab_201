@@ -15,6 +15,20 @@
     transform: translateY(0);
   }
 }
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.animate-blink {
+  animation: blink 1.5s infinite;
+}
 
 .fade-up {
   opacity: 0;
@@ -148,12 +162,12 @@ body {
   text-align: left;
 }
 
-h4{
+h4 {
   font-family: "Orbitron";
   font-weight: bold;
   text-align: center;
   margin-top: 3rem;
-  font-size:2em;
+  font-size: 2em;
 }
 
 .a-propos-content img {
