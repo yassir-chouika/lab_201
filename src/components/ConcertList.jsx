@@ -171,11 +171,11 @@ const ConcertList = () => {
                         name="titre"
                         value={editForm.titre}
                         onChange={handleEditChange}
-                        className="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-gray-500"
+                        className="w-full px-2 py-1 text-sm text-gray-700 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-gray-500"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 mb-1">
+                      <label className="block text-xs  font-medium text-gray-700 mb-1">
                         Date
                       </label>
                       <input
@@ -183,11 +183,11 @@ const ConcertList = () => {
                         name="date"
                         value={editForm.date}
                         onChange={handleEditChange}
-                        className="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-gray-500"
+                        className="w-full px-2 py-1 text-sm text-gray-700 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-gray-500"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 mb-1">
+                      <label className="block text-xs  font-medium text-gray-700 mb-1">
                         Venue
                       </label>
                       <input
@@ -195,11 +195,11 @@ const ConcertList = () => {
                         name="venue"
                         value={editForm.venue}
                         onChange={handleEditChange}
-                        className="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-gray-500"
+                        className="w-full px-2 py-1 text-sm text-gray-700 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-gray-500"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 mb-1">
+                      <label className="block text-xs  font-medium text-gray-700 mb-1">
                         City
                       </label>
                       <input
@@ -207,11 +207,11 @@ const ConcertList = () => {
                         name="ville"
                         value={editForm.ville}
                         onChange={handleEditChange}
-                        className="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-gray-500"
+                        className="w-full px-2 py-1 text-sm text-gray-700 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-gray-500"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-medium text-gray-700 mb-1">
+                      <label className="block text-xs  font-medium text-gray-700 mb-1">
                         Country
                       </label>
                       <input
@@ -219,7 +219,7 @@ const ConcertList = () => {
                         name="pays"
                         value={editForm.pays}
                         onChange={handleEditChange}
-                        className="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-gray-500"
+                        className="w-full px-2 py-1 text-sm text-gray-700 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-gray-500"
                       />
                     </div>
                     <div className="flex items-center pt-4">
@@ -396,24 +396,23 @@ const ConcertList = () => {
         <div className="fixed inset-0 backdrop-blur-xs backdrop-brightness-25 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-6 max-w-sm mx-4">
             <h3 className="text-lg font-medium text-gray-900 mb-2">
-              Delete Concert
+              Supprimer le concert
             </h3>
             <p className="text-sm text-gray-600 mb-4">
-              Are you sure you want to delete this concert? This action cannot
-              be undone.
+               Êtes-vous sûr de vouloir supprimer ce concert ? Cette action est irréversible
             </p>
             <div className="flex justify-end space-x-2">
               <button
                 onClick={() => setDeleteConfirm(null)}
                 className="px-3 py-2 text-sm text-gray-600 border border-gray-300 rounded hover:bg-gray-50"
               >
-                Cancel
+                Annuler
               </button>
               <button
                 onClick={() => handleDelete(deleteConfirm)}
                 className="px-3 py-2 text-sm bg-red-600 text-white rounded hover:bg-red-700"
               >
-                Delete
+                Supprimer
               </button>
             </div>
           </div>

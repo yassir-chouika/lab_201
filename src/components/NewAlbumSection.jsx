@@ -8,7 +8,7 @@ const NewAlbumSection = () => {
       <div className="new-album-content">
         <div className="album-description">
           <p className="album-intro">
-            Sorti le 23 mai 2025 sur le label <strong>Feedelity</strong>,{" "}
+            Sorti le 23 mai 2025 sur le label <strong>Feedelity</strong>,
             <em>Sirius Syntoms</em> est un voyage lumineux, une ode à la
             simplicité et au groove cosmique.
             <br />7 titres, tous conçus avec des synthétiseurs analogiques, une
@@ -26,18 +26,17 @@ const NewAlbumSection = () => {
           </ul>
 
           <a
-            href="httphttps://linktr.ee/hplindstrom?fbclid=PAZXh0bgNhZW0CMTEAAacltpmJPjXvZWlWMJ-AxM1ewfbqJCNPlI3RQTCOuzNIcELp1k8zT8rd1i7HJw_aem_w_mR5b5cn2dcfSnnhpWM-Qs://www.amazon.fr/Everyone-Else-Stranger-Lindstr%C3%B8m/dp/B0C66HVVXN"
+            href="https://www.fnac.com/ia502207/Lindstrom"
             target="_blank"
             rel="noreferrer"
             className="buy-link"
           >
-            Decouvrir son unvivers
-          </a>
+Acheter à la fnac         </a>
         </div>
 
         <div className="album-cover">
           <img
-            src="/pexels-cottonbro-3693108.jpg"
+            src="pochetteAlbum.jpg"
             alt="Pochette de l'album Sirius Syntoms"
           />
         </div>

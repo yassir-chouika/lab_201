@@ -7,17 +7,13 @@ const HeroSection = () => {
   return (
     <section className="hero-global">
       <section className="hero fade-up">
-        <video autoPlay loop muted playsInline>
-          <source
-            src="/hero_vid.mp4"
-            type="video/mp4"
-          />
-        </video>
+         <img src="affiche-officiel2.jpg" alt="Portrait de Lindstrøm"  className="hero-background"/>
+         <img src="logoAlbum-(1).png" alt="Logo Lindstrøm" className="hero-logo" />
         <div className="hero-content">
           <p className="hero-top-text">
             Une traversée cosmique au cœur du disco électronique.
           </p>
-          <h1 className="hero-artist-name">Lindstrøm</h1>
+          <h1 className="hero-artist-name">Lindstr0m</h1>
           <p className="hero-sub-text">
             Revient avec un album solaire et introspectif.
           </p>
