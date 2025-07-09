@@ -4,12 +4,12 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import { AuthProvider } from "./context/AuthContext";
-import PrivateRoute from "./routes/PrivateRoute";
-import PublicRoute from "./routes/PublicRoute";
-import LoginForm from "./components/LoginForm";
-import AdminDashboard from "./pages/AdminDashboard";
-import HomePage from "./pages/HomePage";
+import { AuthProvider } from "./context/AuthContext.jsx";
+import PrivateRoute from "./routes/PrivateRoute.jsx";
+import PublicRoute from "./routes/PublicRoute.jsx";
+import LoginForm from "./components/LoginForm.jsx";
+import AdminDashboard from "./pages/AdminDashboard.jsx";
+import HomePage from "./pages/HomePage.jsx";
 import ConcertsPage from "./pages/ConcertsPage";
 
 function App() {
