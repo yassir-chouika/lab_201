@@ -33,18 +33,17 @@ const ConcertsPage = () => {
   };
 
   return (
-    <div
-      className="min-h-screen py-8 px-4"
-      style={{ backgroundColor: "#9D4EDD" }}
-    >
+    <div className="min-h-screen py-8 px-4" style={{ backgroundColor: "#fff" }}>
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between mb-12">
           <button
             className="flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-colors hover:opacity-80"
             style={{
-              backgroundColor: "#00FFE0",
+              border:"2px solid",
+              bordercolor: "#00FFE0",
               color: "#0D1B2A",
-              cursor:"pointer",
+              cursor: "pointer",
+              borderRadius:"50px",
             }}
             onClick={() => navigate("/")}
           >
@@ -88,14 +87,14 @@ const ConcertsPage = () => {
                 key={concert.id}
                 className="rounded-xl p-6 shadow-lg border-2"
                 style={{
-                  backgroundColor: "#0D1B2A",
+                  backgroundColor: "#fff",
                   borderColor: "#00FFE0",
                 }}
               >
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <h2
-                      className="text-2xl font-bold mb-3"
+                      className="font-mono text-2xl font-bold mb-3"
                       style={{ color: "#00FFE0" }}
                     >
                       {concert.titre}
@@ -109,21 +108,21 @@ const ConcertsPage = () => {
                           className="w-2 h-2 rounded-full"
                           style={{ backgroundColor: "#FF3CAC" }}
                         ></span>
-                        <span>{formatDate(concert.date)}</span>
+                        <span className="font-sans text-[#FF3CAC]">{formatDate(concert.date)}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <span
                           className="w-2 h-2 rounded-full"
                           style={{ backgroundColor: "#FF3CAC" }}
                         ></span>
-                        <span>{concert.venue}</span>
+                        <span className="font-sans text-[#FF3CAC]">{concert.venue}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <span
                           className="w-2 h-2 rounded-full"
                           style={{ backgroundColor: "#FF3CAC" }}
                         ></span>
-                        <span>
+                        <span className="font-sans text-[#FF3CAC]">
                           {concert.ville}, {concert.pays}
                         </span>
                       </div>
@@ -140,7 +139,7 @@ const ConcertsPage = () => {
                           boxShadow: "0 0 15px rgba(255, 60, 172, 0.5)",
                         }}
                       >
-                        Sold Out
+                        COMPLET
                       </span>
                     </div>
                   )}

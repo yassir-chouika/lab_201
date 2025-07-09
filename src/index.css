@@ -177,6 +177,7 @@ body {
   
 }
 
+/* Your existing CSS */
 h4 {
   font-family: "Orbitron";
   font-weight: bold;
@@ -222,12 +223,13 @@ h4 {
   color: black;
 }
 
+/* Updated album gallery with responsive design */
 .album-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 180px); 
+  grid-template-columns: repeat(3, 180px);
   grid-auto-rows: 180px;
   column-gap: 1rem;
-  row-gap: 2rem; 
+  row-gap: 2rem;
   justify-content: center;
   margin-top: 2rem;
 }
@@ -273,6 +275,74 @@ h4 {
 
 .album-card:hover .album-overlay {
   opacity: 1;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .album-gallery {
+    grid-template-columns: repeat(2, 160px);
+    grid-auto-rows: 160px;
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+  }
+  
+  .album-card {
+    width: 160px;
+    height: 160px;
+  }
+  
+  h4 {
+    font-size: 1.8em;
+    margin-top: 2rem;
+  }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+  .album-gallery {
+    grid-template-columns: repeat(2, 140px);
+    grid-auto-rows: 140px;
+    column-gap: 0.8rem;
+    row-gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .album-card {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .album-overlay {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+  
+  h4 {
+    font-size: 1.5em;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Very small phones (320px and below) */
+@media (max-width: 320px) {
+  .album-gallery {
+    grid-template-columns: repeat(2, 120px);
+    grid-auto-rows: 120px;
+    column-gap: 0.5rem;
+    row-gap: 1rem;
+  }
+  
+  .album-card {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .album-overlay {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+  }
 }
 
 
