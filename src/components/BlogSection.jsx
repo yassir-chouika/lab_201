@@ -7,10 +7,7 @@ const BlogSection = () => {
 
       <div className="blog-grid">
         <div className="blog-card">
-          <img
-            src="/pexels-ygtphoto-18647356.jpg"
-            alt="Studio de Lindstrøm"
-          />
+          <img src="/pexels-ygtphoto-18647356.jpg" alt="Studio de Lindstrøm" />
           <h3>Retour en studio</h3>
           <a
             href="https://exemple.com/studio"
@@ -22,10 +19,7 @@ const BlogSection = () => {
         </div>
 
         <div className="blog-card">
-          <img
-            src="/pexels-yankrukov-9001968.jpg"
-            alt="Concert en Norvège"
-          />
+          <img src="/pexels-yankrukov-9001968.jpg" alt="Concert en Norvège" />
           <h3>Live à Bergen</h3>
           <a
             href="https://exemple.com/live-bergen"
@@ -37,10 +31,7 @@ const BlogSection = () => {
         </div>
 
         <div className="blog-card">
-          <img
-            src="/pexels-erxmart-2247678.jpg"
-            alt="Machines et synthés"
-          />
+          <img src="/pexels-erxmart-2247678.jpg" alt="Machines et synthés" />
           <h3>Les machines de Sirius</h3>
           <a
             href="https://exemple.com/synths"

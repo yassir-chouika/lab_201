@@ -7,8 +7,16 @@ const HeroSection = () => {
   return (
     <section className="hero-global">
       <section className="hero fade-up">
-         <img src="affiche-officiel2.jpg" alt="Portrait de Lindstrøm"  className="hero-background"/>
-         <img src="logoAlbum-(1).png" alt="Logo Lindstrøm" className="hero-logo" />
+        <img
+          src="affiche-officiel2.jpg"
+          alt="Portrait de Lindstrøm"
+          className="hero-background"
+        />
+        <img
+          src="logoAlbum-(1).png"
+          alt="Logo Lindstrøm"
+          className="hero-logo"
+        />
         <div className="hero-content">
           <p className="hero-top-text">
             Une traversée cosmique au cœur du disco électronique.
@@ -25,7 +33,7 @@ const HeroSection = () => {
             >
               Écouter maintenant
             </a>
-            <a href="#" className="btn-magenta">
+            <a href="#ConcertSection" className="btn-magenta">
               Voir la tournée
             </a>
           </div>

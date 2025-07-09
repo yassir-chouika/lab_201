@@ -31,7 +31,8 @@ const NewAlbumSection = () => {
             rel="noreferrer"
             className="buy-link"
           >
-Acheter à la fnac         </a>
+            Acheter à la fnac{" "}
+          </a>
         </div>
 
         <div className="album-cover">

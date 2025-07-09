@@ -35,7 +35,7 @@ export default function Tour2025() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-200 flex flex-col">
+    <div id="ConcertSection" className="min-h-screen bg-gray-200 flex flex-col">
       {/* Header */}
       <div className="w-full py-8 px-4">
         <h1 className="font-sans text-center text-4xl md:text-6xl font-bold text-gray-800 tracking-wider">
