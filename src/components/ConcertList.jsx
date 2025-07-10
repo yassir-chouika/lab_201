@@ -399,7 +399,8 @@ const ConcertList = () => {
               Supprimer le concert
             </h3>
             <p className="text-sm text-gray-600 mb-4">
-               Êtes-vous sûr de vouloir supprimer ce concert ? Cette action est irréversible
+              Êtes-vous sûr de vouloir supprimer ce concert ? Cette action est
+              irréversible
             </p>
             <div className="flex justify-end space-x-2">
               <button
